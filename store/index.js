@@ -22,7 +22,7 @@ const store = () => new Vuex.Store({
     }
   },
   actions: {
-    async callApi({ commit }, payload) {
+    async callApi({ commit }) {
       console.log('api')
       const options = {
         method: 'get',
