@@ -22,11 +22,11 @@ const store = () => new Vuex.Store({
     }
   },
   actions: {
-    async callApi({ commit }) {
-      console.log('api')
+    async callApi({ commit }, payload) {
+      console.log(payload)
       const options = {
         method: 'get',
-        url: `https://api.tenor.com/v1/search?tag=happy&key=${key.key}`,
+        url: payload.url
       };
 
       console.log(options.url)

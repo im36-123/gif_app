@@ -9,6 +9,7 @@
 </template>
 
 <script>
+import key from '../static/key.json'
 export default {
   data: function() {
     return {
@@ -22,8 +23,7 @@ export default {
     },
     axios: function () {
       this.$store.dispatch('callApi', {
-        url: 'search.json',
-        method: 'get',
+        url: `https://api.tenor.com/v1/search?tag=happy&key=${key.key}`,
       })
     }
   },
