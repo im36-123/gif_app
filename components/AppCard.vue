@@ -1,21 +1,11 @@
 <template>
   <div class="v-card">
-    <!-- <a :href="gif.url" target="_blank"> -->
+    <a :href="gif.media[0].gif.url" target="_blank">
       <div class="img">
         <video :src="gif.media[0].webm.url" alt="" autoPlay loop></video>
       </div>
-      <div class="text">
-        <p class="text__title" v-if="gif.title">{{ gif.title }}</p>
-        <p class="text__title" v-else>無題</p>
+    </a>
       </div>
-      <div class="tag">
-        <p class="tag__title">タグ</p>
-        <ul class="tag__list">
-          <li class="tag__time"></li>
-        </ul>
-      </div>
-    <!-- </a> -->
-  </div>
 </template>
 
 <script>
