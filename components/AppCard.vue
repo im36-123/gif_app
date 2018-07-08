@@ -5,7 +5,7 @@
         <video :src="gif.media[0].webm.url" alt="" autoPlay loop></video>
       </div>
     </a>
-      </div>
+  </div>
 </template>
 
 <script>
@@ -18,12 +18,6 @@ export default {
 
 <style lang="scss" scoped>
 .v-card {
-  width: 320px;
-  height: 500px;
-  border-radius: 8px;
-  background-color: red;
-  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-    0 1px 5px 0 rgba(0, 0, 0, 0.12);
   overflow: hidden;
 }
 
@@ -35,18 +29,17 @@ export default {
 
 .v-card .img {
   width: inherit;
-  height: calc(500px / 3 * 2);
-  background-color: aquamarine;
 }
 
 .v-card .img video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
+
 .v-card .text {
   padding: 24px 16px;
 }
+
 .v-card .text__title {
   font-size: 24px;
 }
