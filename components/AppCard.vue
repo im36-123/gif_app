@@ -2,7 +2,7 @@
   <div class="v-card">
     <!-- <a :href="gif.url" target="_blank"> -->
       <div class="img">
-        <img :src="gif.media[0].gif.url" alt="">
+        <video :src="gif.media[0].webm.url" alt="" autoPlay loop></video>
       </div>
       <div class="text">
         <p class="text__title" v-if="gif.title">{{ gif.title }}</p>
@@ -48,7 +48,8 @@ export default {
   height: calc(500px / 3 * 2);
   background-color: aquamarine;
 }
-.v-card .img img {
+
+.v-card .img video {
   width: 100%;
   height: 100%;
   object-fit: cover;
