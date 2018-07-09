@@ -1,11 +1,32 @@
 <template>
   <div class="v-header">
     <header>
-      <h1>gif-app</h1>
+      <input type="text" :value="value" @input="input">
+        <div class="VueToNuxtLogo">
+          <div @click="axios">axios</div>
+        </div>
     </header>
   </div>
 </template>
 
-<style>
+<script>
+export default {
+  data: function() {
+    return {
+      value: ""
+    };
+  },
+  methods: {
+    input: function(e) {
+      this.$store.commit("updateText", e.target.value);
+    },
+    axios: function() {
+      this.$store.dispatch("callApi", this.$store.state);
+    }
+  }
+};
+</script>
 
+
+<style>
 </style>

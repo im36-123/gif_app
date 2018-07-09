@@ -1,16 +1,16 @@
 import Vuex from 'vuex'
 import axios from 'axios'
-import key from '../static/key.json'
+import key from "../static/key.json";
 
 const store = () => new Vuex.Store({
   state: {
-    keyword: 'ストア',
+    keyword: '',
     gifs: []
   },
   mutations: {
-    updateKeyword(state, val) {
-      console.log('update')
+    updateText(state, val) {
       state.keyword = val
+      console.log(state.keyword)
     },
     updateGifs(state, arr) {
       state.gifs = arr
@@ -23,10 +23,10 @@ const store = () => new Vuex.Store({
   },
   actions: {
     async callApi({ commit }, payload) {
-      console.log(payload)
+      console.log(payload.keyword)
       const options = {
         method: 'get',
-        url: payload.url
+        url: `https://api.tenor.com/v1/search?tag=${payload.keyword}&key=${key.key}`
       };
 
       console.log(options.url)

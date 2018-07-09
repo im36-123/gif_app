@@ -1,22 +1,22 @@
 <template>
   <section class="container">
     <div>
-      <app-timeline/>
+      <app-header/>
     </div>
     <div>
-      <app-logo/>
+      <app-timeline/>
     </div>
   </section>
 </template>
 
 <script>
+import AppHeader from '~/components/AppHeader.vue'
 import AppTimeline from '~/components/AppTimeline.vue'
-import AppLogo from '~/components/AppLogo.vue'
 
 export default {
   components: {
+    AppHeader,
     AppTimeline,
-    AppLogo
   }
 }
 </script>

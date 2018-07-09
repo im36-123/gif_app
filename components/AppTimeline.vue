@@ -8,19 +8,17 @@
 </template>
 
 <script>
-import AppCard from '~/components/AppCard.vue'
-import { mapGetters } from 'vuex'
+import AppCard from "~/components/AppCard.vue";
+import { mapGetters } from "vuex";
 
 export default {
   components: {
-    AppCard,
+    AppCard
   },
   computed: {
-    ...mapGetters([
-      'gifs'
-    ])
+    ...mapGetters(["gifs"])
   }
-}
+};
 </script>
 
 <style lang="scss" scoped>
